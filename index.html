@@ -10,11 +10,13 @@
 <body>
     <!-- p229 -->
     <form>
+        <fieldset>
         <ul>
             <li>이름 : <input type="text" id="user_name"></li>
             <li>메일 주소 : <input type="text" id="user_mail"></li>
             <li><input type="submit" value="가입하기"></li>
         </ul>
+    </fieldset>
     </form>
 
     <!-- p231 -->
@@ -26,6 +28,7 @@
                 <li>비밀번호 : <input type="password" id="pw"></li>
             </ul>
         </fieldset>
+
         <fieldset>
             <legend>가입자 정보</legend>
             <ul>
@@ -34,6 +37,7 @@
                 <li>생년월일 : <input type="text" id="birth"></li>
             </ul>
         </fieldset>
+        
         <fieldset>
             <input type="submit" value="가입하기">
         </fieldset>
@@ -54,23 +58,199 @@
     <!-- p237 -->
     <form action="">
         <fieldset id="register">
-        <legend>수강 과목을 선택하세요<small>(1과목 선택 가능)</small>
-        </legend>
-        <ul>
-            <li>
-                <label for="">
-                    <input type="radio" name="spk" id="spk" value="low" checked>영어 회화(초급)
-                </label>
-            </li>
-            <li>
-                <label for="">
-                    <input type="radio" name="spk" id="spk" value="low" checked>영어 회화(중급)
-                </label>
-            </li>
-
-        </ul>        
+            <legend>수강 과목을 선택하세요<small>(1과목 선택 가능)</small>
+            </legend>
+            <ul>
+                <li>
+                    <label for="">
+                        <input type="radio" name="spk" id="spk" value="low" checked>영어 회화(초급)
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input type="radio" name="spk" id="spk" value="middle">영어 회화(중급)
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input type="radio" name="spk" id="spk" value="high">영어 회화(고급)
+                    </label>
+                </li>
+            </ul>
         </fieldset>
     </form>
+
+    <form action="">
+        <fieldset>
+            <legend for="pre">관심분야는?<small>(다수 선택 가능)</small>
+            </legend>
+            <ul>
+                <li>
+                    <input type="checkbox" name="pre" id="pre" value="grammer">문법
+                </li>
+                <li>
+                    <input type="checkbox" name="pre" id="pre" value="voca">어휘
+                </li>
+                <li>
+                    <input type="checkbox" name="pre" id="pre" value="conversation">회화
+                </li>
+                <li>
+                    <input type="checkbox" name="pre" id="pre" value="listeing">리스닝
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset>
+        <ul>
+            <li><label for="">이름:<input type="text"></label></li>
+            <li><label for="">메일 주소:<input type="text"></label></li>
+            <li>소식지 수신
+                <label for=""><input type="radio" value="yes" name="letter">수신</label>
+                <label for=""><input type="radio" value="no" name="letter">수신안함</label>
+            </li>
+            <li><input type="submit" value="가입하기"></li>
+        </ul>
+        </fieldset>
+    </form>
+
+    <form action="">
+        <fieldset class="login">
+            <label for="">아이디: <input type="text" id="user_id" size="10"></label>
+            <label for="">비밀번호: <input type="password" id="user_pw" size="10"></label>
+            <input type="submit" value="로그인">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <input type="search">
+            <input type="submit" value="검색">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <label for="">홈페이지 주소 : <input type="url"></label>
+            <label for="">이메일 주소 : <input type="email"></label>
+            <label for="">전화번호 : <input type="tel"></label>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset class="register">
+            <legend>가입하기</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="user_mail">메일주소<em>*</em> </label>
+                    <input type="email" id="user_mail" size="20" required>
+                </li>
+                <li>
+                    <label class="reg" for="user_tel">전화번호</label>
+                    <input type="tel" id="user_tel" size="20">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <label>주문개수: <input type="number" min="1" max="5" value="1"> 박스(1인당 최대 5박스)</label>
+            <label>익은 정도(3단계): <input type="range" min="1" max="3" value="3"></label>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>등록 정보</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="member">참여인원<small>(최대10명)</small></label>
+                    <input type="number" id="member" value="1" min="0" max="10" step="1">
+                </li>
+                <li>
+                    <label class="reg" for="stuffs">지원물품<small>(1인당5개)</small></label>
+                    <input type="number" id="stuffs" value="1" min="0" max="50" step="5" size="5">
+                </li>
+                <li>
+                    <label class="reg" for="satis">희망단계<small>(하,중,상)</small></label>
+                    <input type="range" id="satis" value="1" min="1" max="3">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <p>동의하십니까?</p>
+            <label><input type="radio" value="yes" name="agreement">동의함</label>
+            <label><input type="radio" value="no" name="agreement">동의하지 않음</label>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset id="register">
+            <legend>수강 과목을 선택하세요<small>(1과목 선택 가능)</small></legend>
+            <ul>
+                <li>
+                    <label class="reg" for="color">선호색상</label>
+                    <input type="color" id="color">
+                </li>
+                <li>
+                    신청과목<small>(회화)</small>
+                    <label><input type="radio" name="spk" id="spk" value="low" checked="">영어회화(초급)</label>
+                    <label><input type="radio" name="spk" id="spk" value="middle">영어회화(중급)</label>
+                    <label><input type="radio" name="spk" id="spk" value="high">영어회화(고급)</label>
+                </li>
+                <li>
+                    신청과목<small>(자격)</small>
+                    <label><input type="radio" name="cert" id="cert" value="toeic">TOEIC</label>
+                    <label><input type="radio" name="cert" id="cert" value="toefl">TOEFL</label>
+                    <label><input type="radio" name="cert" id="cert" value="opic">OPIC</label>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <h3>사용 중인 SNS는?</h3>
+            <label><input type="checkbox" value="tw">Twitter</label>
+            <label><input type="checkbox" value="fb">Facdbook</label>
+            <label><input type="checkbox" value="linked">LinkedIn</label>
+            <label><input type="checkbox" value="pint">Pinterest</label>
+            <!--  input type 속성에서 사용할 수 있는 유형:
+        -> hidden, text, search, tel, url, email, password, number, range, color,
+           checkbox, radio, datetime, datetime-local, date, month, week, time, button,
+           file, submit, image, reset -->
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend> 관심분야는? <small>(다수 선택 가능)</small></legend>
+            <ul>
+                <li>
+                    <label><input type="checkbox" id="pre" value="grammer">문법</label>
+                    <label><input type="checkbox" id="pre" value="voca">어휘</label>
+                    <label><input type="checkbox" id="pre" value="conversation">회화</label>
+                    <label><input type="checkbox" id="pre" value="listeing">리스닝</label>
+                    <label><input type="checkbox" id="pre" value="news">뉴스 청취</label>
+                    <label><input type="checkbox" id="pre" value="reading">독해</label>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <h3>조회기간 선택</h3>
+            <label><input type="date" id="start"></label>
+            <label><input type="date" id="stop"></label>
+        </fieldset>
+    </form>
+
 </body>
 
 </html>
