@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -101,24 +102,24 @@
         </fieldset>
     </form>
 
-    <form action="">
+    <form>
         <fieldset>
             <ul>
-                <li><label for="">이름:<input type="text"></label></li>
-                <li><label for="">메일 주소:<input type="text"></label></li>
+                <li><label>이름:<input type="text"></label></li>
+                <li><label>메일 주소:<input type="text"></label></li>
                 <li>소식지 수신
-                    <label for=""><input type="radio" value="yes" name="letter">수신</label>
-                    <label for=""><input type="radio" value="no" name="letter">수신안함</label>
+                    <label><input type="radio" value="yes" name="letter">수신</label>
+                    <label><input type="radio" value="no" name="letter">수신안함</label>
                 </li>
                 <li><input type="submit" value="가입하기"></li>
             </ul>
         </fieldset>
     </form>
 
-    <form action="">
+    <form>
         <fieldset class="login">
-            <label for="">아이디: <input type="text" id="user_id" size="10"></label>
-            <label for="">비밀번호: <input type="password" id="user_pw" size="10"></label>
+            <label>아이디: <input type="text" id="user_id" size="10"></label>
+            <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
             <input type="submit" value="로그인">
         </fieldset>
     </form>
@@ -132,9 +133,9 @@
 
     <form>
         <fieldset>
-            <label for="">홈페이지 주소 : <input type="url"></label>
-            <label for="">이메일 주소 : <input type="email"></label>
-            <label for="">전화번호 : <input type="tel"></label>
+            <label>홈페이지 주소 : <input type="url"></label>
+            <label>이메일 주소 : <input type="email"></label>
+            <label>전화번호 : <input type="tel"></label>
         </fieldset>
     </form>
 
@@ -312,7 +313,7 @@
         <fieldset>
             <legend>수강과목</legend>
             <label class="reg" for="subj">영어회화(초급)</label>
-            <input type="text" id="subj" value="오전 9:00~11:00" readonly>            
+            <input type="text" id="subj" value="오전 9:00~11:00" readonly>
         </fieldset>
         <fieldset>
             <label>연락처:<input type="text" placeholder="숫자만 입력"></label>
@@ -329,10 +330,110 @@
                 <label class="reg" for="uname">이름</label>
                 <input type="text" id="uname" placeholder="공백 없이 입력하세요" autofocus>
             </li>
+            <li>
+                <label class="reg" for="uid">학번</label>
+                <input type="text" id="uid" placeholder="7자리학번">
+            </li>
+            <li>
+                <label>아이디:<input type="text" autocomplete="off"></label>
+                <label>주소:<input type="text" size="20" maxlength="60"></label>
+            </li>
+            <li>
+                <label class="reg" for="uid">학번</label>
+                <input type="text" id="uid" placeholder="하이픈 없이 입력" maxlength="8" required>
+            </li>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>교재 주문</legend>
+            <li>
+                <label class="reg" for="book">교재</label>
+                <input type="number" id="book" value="1" min="1" max="3">
+            </li>
+            <li>
+                <label class="reg" for="wsheet">워크시트</label>
+                <input type="number" id="wsheet" value="1" min="1" max="3">
+            </li>
+            <li>
+                <label class="reg" for="group">단체주문</label>
+                <input type="number" id="group" value="10" min="10" max="100" step="10">
+            </li>
         </fieldset>
     </form>
 
-    
+    <form>
+        <fieldset>
+            <legend>메일링 리스트 가입</legend>
+            <label>메일주소:<input type="email" required></label>
+            <input type="submit" value="등록">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>신청자</legend>
+            <li>
+                <label class="reg" for="uname">이름</label>
+                <input type="text" id="uname" autofocus required>
+            </li>
+            <li>
+                <label class="reg" for="uid">학번</label>
+                <input type="text" id="uid" placeholder="하이픈없이 입력" maxlength="8" required>
+            </li>
+        </fieldset>
+    </form>
+
+    <form>
+        <h1>주문서 작성하기</h1>
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label>이름<input type="text" placeholder="여백 없이 입력" required></label>
+                </li>
+                <li>
+                    <label>연락처<input type="tel" placeholder="연락가능한 번호" required></label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>배송지 정보</legend>
+            <ul>
+                <li>
+                    <label>주소<input type="text" size="40" max="60" required></label>
+                </li>
+                <li>
+                    <label>전화번호<input type="tel2" required></label>
+                </li>
+                <li>
+                    <label>메모<textarea cols="40" rows="3"></textarea></label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>주문 정보</legend>
+            <ul>
+                <li>
+                    <label><input type="checkbox">과테말라 안티구아(100g)
+                        <label><input type="number" value="0" min="0" max="5">개</label>
+                </li>
+                <li>
+                    <label><input type="checkbox">인도네시아 만델링(100g)
+                        <label><input type="number" value="0" min="0" max="5">개</label>
+                </li>
+                <li>
+                    <label><input type="checkbox">탐라는도다(블렌딩)(100g)
+                        <label><input type="number" value="0" min="0" max="5">개</label>
+                </li>
+            </ul>
+        </fieldset>
+        <label><input type="submit" value="주문하기"></label>
+        <label><input type="reset" value="다시 작성"></label>
+
+    </form>
+
+
 
 </body>
 
